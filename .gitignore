@@ -1,0 +1,6 @@
+*.py[co]
+.idea/
+dist
+build
+*.egg-info
+run.py
