@@ -10,7 +10,7 @@ assert sys.version_info >= (2, 7), 'Requires python 2.7 or later version.'
 setup(
     name='happyspider',
     version='1.0.0',
-    url='https://github.com/jellycoming',
+    url='https://github.com/jellycoming/happyspider',
     author='jellycoming',
     author_email='jellycoming@163.com',
     description='A simple spider framework.',
