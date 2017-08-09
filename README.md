@@ -13,13 +13,13 @@ project
 │   │   __init__.py
 │   │   demo.py
 |___setting.py
+|___transporter.py (optional)
 ```
 # demo.py
 ```py
 # coding=utf-8
 from happyspider import Spider, Request, Item
 from lxml import etree
-
 
 class Demo(Spider):
     name = 'demo'
@@ -63,6 +63,21 @@ PHANTOMJS_SETTING = dict(
 )
 # Phantomjs进程数
 PHANTOMJS_PROC = 4
+```
+# transporter.py
+```py
+# coding=utf-8
+import json
+from happyspider.transporter import Driver
+
+class MyDriver(Driver):
+    def __init__(self):
+        super(MyDriver, self).__init__(thread_safety=True)
+
+    def transport(self, spider, item):
+        item.spider = spider.name
+        with open('/tmp/happyspider.txt', 'a') as f:
+            json.dump(item, f)
 ```
 # Run
 `cd /path/to && happyspider run --debug`
