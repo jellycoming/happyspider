@@ -12,7 +12,7 @@ setup(
     version='1.0.0',
     url='https://github.com/jellycoming/happyspider',
     author='jellycoming',
-    author_email='jellycoming@163.com',
+    author_email='',
     description='A simple spider framework.',
     packages=find_packages(exclude=('tests', 'tests.*')),
     include_package_data=True,
