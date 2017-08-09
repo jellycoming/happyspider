@@ -1,15 +1,12 @@
 # happyspider
----
 A simple spider framework for Python
 # Install
----
 `cd happyspider`
 
 `pip install -r requirements.txt`
 
 `bash setup.sh`
 # Project
----
 ```
 project
 └───spiders
@@ -18,7 +15,6 @@ project
 |___setting.py
 ```
 # demo.py
----
 ```py
 # coding=utf-8
 from happyspider import Spider, Request, Item
@@ -43,7 +39,6 @@ class Demo(Spider):
         yield Item(title=title[0], name=self.name)
 ```
 # settings.py
----
 ```py
 # coding=utf-8
 
@@ -70,6 +65,5 @@ PHANTOMJS_SETTING = dict(
 PHANTOMJS_PROC = 4
 ```
 # Run
----
 `cd /path/to && happyspider run --debug`
 
